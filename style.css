@@ -17,7 +17,7 @@ section{
     background-color:#242424 ;
     height: 600px;
     width: 50%;
-    min-width: 400px;
+    min-width: 550px;
     border-radius: 7px;
    
 
@@ -86,7 +86,7 @@ section{
 }
 .clearAll{
     width: 95%;
-    /* grid-column: 4/6; */
+    grid-column: 4/6;
     background-color: #ff7979;
 }
 .equal{

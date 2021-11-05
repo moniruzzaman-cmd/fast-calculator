@@ -39,8 +39,7 @@ oparetionEl.forEach(oparation => {
             result = parseFloat(dis2num)
         }
         clearVar(oparationName)
-        console.log(result)
-        lestOparetion = oparationName
+        lestOparetion = oparationName;
     })
 })
 function  clearVar(number =''){
@@ -52,8 +51,8 @@ function  clearVar(number =''){
 
 }
 function mathOparation() {
-    if(lestOparetion === 'x'){
-        result = parseFloat(dis1num)*parseFloat(dis2num)
+    if(lestOparetion === 'X'){
+        result = parseFloat(dis1num) * parseFloat(dis2num)
     }else if(lestOparetion === '-'){
         result = parseFloat(dis1num) - parseFloat(dis2num)}
     else if(lestOparetion === '+'){
@@ -86,7 +85,11 @@ clearallEl.addEventListener('click',(e)=> {
 })
 
 clearLastOne.addEventListener('click',(e)=>{
-    display02.innerText=''
-    dis2num=''
+    display01.innerText = '0'
+    display02.innerText = '0'
+    dis1num = ''
+    dis2num = ''
+    tempResult = '0'
+    result=''
 
 })
