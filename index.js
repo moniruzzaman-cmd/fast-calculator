@@ -63,7 +63,7 @@ function mathOparation() {
         result = parseFloat(dis1num) / parseFloat(dis2num)
     }
     else if (lestOparetion === '%') {
-        result = parseFloat(dis1num) % parseFloat(dis2num)
+        result = parseFloat(dis1num)/100 * parseFloat(dis2num)
     }
 
 }
