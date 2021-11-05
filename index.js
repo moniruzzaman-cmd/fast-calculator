@@ -34,62 +34,66 @@ oparetionEl.forEach(oparation => {
         var oparationName = e.target.innerText;
         if (dis1num && dis2num && lestOparetion) {
             mathOparation()
-            
-        }else{
+
+        } else {
             result = parseFloat(dis2num)
         }
         clearVar(oparationName)
         lestOparetion = oparationName;
     })
 })
-function  clearVar(number =''){
+function clearVar(number = '') {
     dis1num += dis2num + ' ' + number + ' ';
     display01.innerText = dis1num;
-    display02.innerText='';
+    display02.innerText = '';
     dis2num = ''
     tempResult.innerText = result
 
 }
 function mathOparation() {
-    if(lestOparetion === 'X'){
+    if (lestOparetion === 'X') {
         result = parseFloat(dis1num) * parseFloat(dis2num)
-    }else if(lestOparetion === '-'){
-        result = parseFloat(dis1num) - parseFloat(dis2num)}
-    else if(lestOparetion === '+'){
-        result = parseFloat(dis1num) + parseFloat(dis2num)}
-    else if(lestOparetion === '/'){
-        result = parseFloat(dis1num) / parseFloat(dis2num)}
-    else if(lestOparetion === '%'){
-        result = parseFloat(dis1num) % parseFloat(dis2num)}
-    
+    } else if (lestOparetion === '-') {
+        result = parseFloat(dis1num) - parseFloat(dis2num)
+    }
+    else if (lestOparetion === '+') {
+        result = parseFloat(dis1num) + parseFloat(dis2num)
+    }
+    else if (lestOparetion === '/') {
+        result = parseFloat(dis1num) / parseFloat(dis2num)
+    }
+    else if (lestOparetion === '%') {
+        result = parseFloat(dis1num) % parseFloat(dis2num)
+    }
+
 }
- equaleEl.addEventListener('click',(e)=>{
-    if ( !dis1num || !dis2num) return;
+equaleEl.addEventListener('click', (e) => {
+    if (!dis1num || !dis2num) return;
     haveDot = false;
     mathOparation();
     clearVar();
     display02.innerText = result;
-    tempResult.innerText='';
+    tempResult.innerText = '';
     dis2num = result;
-    dis1num='';
+    dis1num = '';
 
 
 })
-clearallEl.addEventListener('click',(e)=> {
+clearallEl.addEventListener('click', (e) => {
     display01.innerText = '0'
     display02.innerText = '0'
     dis1num = ''
     dis2num = ''
     tempResult = '0'
-    result=''
+    result = ''
 })
 
-clearLastOne.addEventListener('click',(e)=>{
-    display01.innerText = '0'
-    display02.innerText = '0'
-    dis1num = ''
-    dis2num = ''
-    tempResult = '0'
-    result=''
+// clearLastOne.addEventListener('click', (e) => {
+//     display01.innerText = '0'
+//     display02.innerText = '0'
+//     dis1num = ''
+//     dis2num = ''
+//     tempResult = '0'
+//     result = ''
 
-})
+// })
