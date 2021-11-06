@@ -33,6 +33,7 @@ section{
     border-radius: 10px;
     position: relative;
     width: 90%;
+    overflow: hidden;
 }
 .topPart{
     background-color:#000000 ;
